@@ -1,7 +1,15 @@
-﻿@{
+﻿@{ 
+    //dentro desse bloco é código c# bloco: @{ }
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3><!--esse Message é aquela chave que foi definida no controlador no método About-->
+
+<p>Aluno: @ViewData["Student"]</p>
+
+<address>
+    <strong>Mais informações: </strong> <a href="http://educandoweb.com.br">educandoweb.com.br</a>
+</address>
+

@@ -10,16 +10,18 @@ namespace SalesWebMvc.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index() //IActionResult é o resultado de uma ação
         {
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            ViewData["Message"] = "Sales Web MVC App from C# Course"; //passou o valor para a chave message do viewData
+            ViewData["Student"] = "Matheus";
+            return View(); 
+            //vai retornar a view de acordo com o método, nesse caso o framework vai procurar na pasta views
+            // na subpasta Home(nome do controller) pela view About
         }
 
         public IActionResult Contact()
