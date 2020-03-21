@@ -26,7 +26,8 @@ namespace SalesWebMvc
             services.AddMvc();
 
             services.AddDbContext<SalesWebMvcContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SalesWebMvcContext")));
+                    options.UseMySql(Configuration.GetConnectionString("SalesWebMvcContext"), builder =>
+                        builder.MigrationsAssembly("SalesWebMvc"))); //configuração do gerenciador de banco que vai ser usado na aplicação
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
