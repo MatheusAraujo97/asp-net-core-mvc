@@ -19,5 +19,11 @@ namespace SalesWebMvc.Services
         {
             return _context.Seller.ToList(); //retorna os registros da tabela Seller em forma de lista
         }
+
+        public void Insert(Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
